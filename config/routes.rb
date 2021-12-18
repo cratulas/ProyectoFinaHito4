@@ -5,5 +5,6 @@ Rails.application.routes.draw do
   get 'home/indexVisit'
   get 'home/indexUser'
   get 'home/market'
+  root to: "home#indexVisit"
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
