@@ -1,11 +1,15 @@
 Rails.application.routes.draw do
+  resources :products
+  resources :comments
+  resources :posts
+  
   root to: "home#indexVisit"
 
   get 'home/indexVisit'
   get 'home/indexUser'
   get 'home/market'
   
-  resources :products
+  
 
   devise_for :admins
 
@@ -22,11 +26,13 @@ Rails.application.routes.draw do
     registrations: 'veterinaries/registrations'
   }
 
-  #  resource :cart, only: [:show, :update, :destroy] do
-  #    member do
-  #      post :pay_with_paypal
-  #      get :process_paypal_payment
-  #    end
-  #  end
+  resource :cart, only: [:show, :update, :destroy] do
+    member do
+      post :pay_with_paypal
+      get :process_paypal_payment
+    end
+  end
+
+
 end
 

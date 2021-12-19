@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Chatpetapp</title>
+    <title>PetChat3</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -10,12 +10,15 @@
   </head>
 
   <body>
-        <p class="notice"><%= notice %></p>
+     <%= render('shared/navbar') %>
+    <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
 
     <div class="container">
 
       <%= yield %>
     </div>
+
+    
   </body>
 </html>

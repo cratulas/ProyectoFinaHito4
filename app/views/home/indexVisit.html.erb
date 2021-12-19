@@ -1,10 +1,32 @@
-<button type="button" class="btn btn-primary">Primary</button>
-<button type="button" class="btn btn-secondary">Secondary</button>
-<button type="button" class="btn btn-success">Success</button>
-<button type="button" class="btn btn-danger">Danger</button>
-<button type="button" class="btn btn-warning">Warning</button>
-<button type="button" class="btn btn-info">Info</button>
-<button type="button" class="btn btn-light">Light</button>
-<button type="button" class="btn btn-dark">Dark</button>
+<div class="container">
 
-<button type="button" class="btn btn-link">Link</button>
+    <h1>Home#indexVisit</h1>
+    <p>Find me in app/views/home/indexVisit.html.erb</p>
+    
+    <div class="btn-group" role="group" aria-label="Basic example">
+  <button type="button" class="btn btn-secondary">Left</button>
+  <button type="button" class="btn btn-secondary">Middle</button>
+  <button type="button" class="btn btn-secondary">Right</button>
+</div>
+
+</div>
+
+<% unless current_user %>
+<%= link_to 'Sign in with Facebook', user_facebook_omniauth_authorize_path, method: :post %>
+<% else %>
+<%= link_to 'Logout', destroy_user_session_path, method: :delete %>
+<% end %>
+
+<div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+        <img src="https://images-na.ssl-images-amazon.com/images/I/71+mDoHG4mL.png" class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="https://images-na.ssl-images-amazon.com/images/I/71+mDoHG4mL.png" class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="https://images-na.ssl-images-amazon.com/images/I/71+mDoHG4mL.png" class="d-block w-100" alt="...">
+    </div>
+  </div>
+</div>  
