@@ -1,4 +1,7 @@
+link to sentry: https://sentry.io/organizations/petchatapp/issues/?project=6113604
+
 link to heroku: https://petchatapp.herokuapp.com/
+
 
 1) crear carpeta
 2) abrir terminal en carpeta creada
