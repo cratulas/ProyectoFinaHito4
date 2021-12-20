@@ -34,3 +34,5 @@ link to heroku: https://petchatapp.herokuapp.com/
     a) rails db:create
     b) rails db:migrate
     c) rails db:seed
+
+9) rails s
