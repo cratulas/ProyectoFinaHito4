@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   get 'home/indexVisit'
   get 'home/indexUser'
   get 'home/market'
+  get 'home/about'
   
   
 

@@ -9,4 +9,8 @@ class HomeController < ApplicationController
   def market
     @products = Product.all
   end
+
+  def about
+    
+  end
 end
