@@ -4,21 +4,22 @@
     <title>PetChat3</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+    <!--FontAwesome-->    
+    <script src="https://kit.fontawesome.com/ab6bee0ad1.js" crossorigin="anonymous"></script>
+    <!--Google Fonts-->    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet">
+
   </head>
 
   <body>
-     <%= render('shared/navbar') %>
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
+    <%= render('shared/navbar') %>  
+    <%= yield %>
 
-    <div class="container">
-
-      <%= yield %>
-    </div>
-
-    
+    <%= render('shared/footer') %>
   </body>
 </html>

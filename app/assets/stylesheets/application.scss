@@ -13,4 +13,98 @@
  *= require_tree .
  *= require_self
  */
- @import "bootstrap";
+@import "bootstrap";
+
+body{
+    color: black;
+    font-family: 'Roboto', sans-serif;
+    font-size: 22px;
+    font-weight: 900;
+    line-height: 32,81px;
+}
+
+.appoinment{
+    border-radius: 25px;
+}
+
+.homeVisit{
+    background-image: url('2.jpg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: right;
+    padding-bottom: 20rem;
+}
+
+.homeVisit1{
+    background-image: url('LOGO3.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    padding-bottom: 10rem;
+}
+
+.no-bullets {
+    list-style-type: none;
+}
+
+.footer {
+    font-size: 20px;
+    font-weight: 900;
+    line-height: 32,81px;
+}
+
+
+.new{
+    background-image: url('cat-phone-1140x681.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom right;
+    background-attachment: fixed;
+}
+
+.login{
+    background-image: url('DSCF1374.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+
+}   
+
+.logindos{
+    opacity: 0.9;
+}
+
+.item1{
+    background-image: url('240_F_439542983_1hcZPrmRqb8k3wde81JBSc48xyY2n18f.jpg');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    padding-bottom: 20rem;
+}
+
+.item2{
+    background-image: url('1000_F_424805235_bVUEogoEFoJn4rUucZD64Ti4uwjpXxry.jpg');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    padding-bottom: 22rem;
+}
+
+.item3{
+    background-image: url('gato.jpg');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    padding-bottom: 25rem;
+}
+
+.item4{
+    background-image: url('1000_F_298841300_LXNnwQkkJMVuCWl8sdHbwomUT51Fx2D8.jpg');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    padding-bottom: 25rem;
+}
+
+.newpost{
+    background-image: url('gato.jpg');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    padding-bottom: 25rem;
+}

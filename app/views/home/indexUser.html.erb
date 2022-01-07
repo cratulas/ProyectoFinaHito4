@@ -1,4 +1,265 @@
-<div class="alert alert-primary" role="alert">
-  Hola <%= current_user.email %> te contamos que haz realizado: <%= current_user.total%> compra(s) con nosotros
+<div class="container-fluid p-0">
+  <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+    <ol class="carousel-indicators">
+      <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active bg-dark"></li>
+      <li data-target="#carouselExampleIndicators" data-slide-to="1" class="active bg-dark"></li>
+      <li data-target="#carouselExampleIndicators" data-slide-to="2" class="active bg-dark"></li>
+      <li data-target="#carouselExampleIndicators" data-slide-to="3" class="active bg-dark"></li>
+    </ol>
+    <div class="carousel-inner">
+      <div class="carousel-item active item1">
+        <div class="container-fluid">
+          <div class="container">
+            <div class="container alert alert-primary" role="alert">
+              <% if current_user != nil%>
+                Hola <%= current_user.email %> te contamos que haz realizado: <%= current_user.total%> compra(s) con nosotros
+              <% end%>
+            </div>
+            <h1 class="text-center my-5 text-warning">WELCOME TO PETCHAT</h1>
+            <h3 class="text-center my-5 text-info">A COMMUNITY TO SHARE THE LOVE FOR OUR PETS</h3>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item item2">
+        <div class="container-fluid ">
+          <div class="container-fluid">
+            <h1 class="my-5 text-white display-3">CHAT</h1>
+            <p class="my-5 text-white">CONSULT A PROFESIONAL OR ADVISE A PETLOVER LIKE YOU</p>
+          </div>  
+        </div>
+      </div>
+      <div class="carousel-item item3">
+        <div class="container-fluid">
+          <div class="container text-left">
+            <h1 class="my-5 text-white">SELL AND BUY</h1>
+            <h3 class="my-5 text-white text-uppercase">Post what you want to sell or find what you need to buy</h3>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item item4">
+        <div class="container-fluid">
+          <div class="container text-center">
+            <h1 class="my-5 text-info">SCHEDULE ONE HOUR</h1>
+            <p class="my-5 text-info text-uppercase">Find a veterinarian near you and schedule time directly</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
 </div>
-<div id="createData" class = "my-5"></div>
+
+
+
+<div class="container-fluid">
+  <h2 class="text-center mt-4 text-info">FEATURED PRODUCTS</h2>
+  <div class="container my-4">  
+    <!--Carousel Wrapper-->
+    <div id="multi-item-example" class="carousel slide carousel-multi-item text-center" data-ride="carousel">
+  
+
+      <!--Indicators-->
+      <ol class="carousel-indicators">
+        <li data-target="#multi-item-example" data-slide-to="0" class="active"></li>
+        <li data-target="#multi-item-example" data-slide-to="1"></li>
+        <li data-target="#multi-item-example" data-slide-to="2"></li>
+      </ol>
+      <!--/.Indicators-->
+  
+      <!--Slides-->
+      <div class="carousel-inner" role="listbox">
+  
+        <!--First slide-->
+        <div class="carousel-item active">
+  
+          <div class="row">
+            <div class="col-md-3">
+              <div class="card mb-2 rounded">
+                <%= image_tag("accesorios-01.png", size: "215x198", alt: "Edit Entry" ,class: "card-img-top")%>
+                
+                <div class="card-body">
+                  <h4 class="card-title">Card title</h4>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                    card's content.</p>
+                  <%= link_to 'Add to cart  <i class="fas fa-cart-plus"></i>'.html_safe, cart_path, class: "btn btn-primary" %>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-3">
+              <div class="card mb-2">
+                <%= image_tag("accesorios-02.png", size: "215x198", alt: "Edit Entry" ,class: "card-img-top")%>
+                <div class="card-body">
+                  <h4 class="card-title">Card title</h4>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                    card's content.</p>
+                  <%= link_to 'Add to cart  <i class="fas fa-cart-plus"></i>'.html_safe, cart_path, class: "btn btn-primary" %>
+                </div>
+              </div>
+            </div>
+  
+  
+            <div class="col-md-3 clearfix d-none d-md-block">
+              <div class="card mb-2">
+                <%= image_tag("accesorios-03.png", size: "215x198", alt: "Edit Entry" ,class: "card-img-top")%>
+                <div class="card-body">
+                  <h4 class="card-title">Card title</h4>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                    card's content.</p>
+                  <%= link_to 'Add to cart  <i class="fas fa-cart-plus"></i>'.html_safe, cart_path, class: "btn btn-primary" %>
+                </div>
+              </div>
+            </div>
+  
+            <div class="col-md-3 clearfix d-none d-md-block">
+              <div class="card mb-2">
+                <%= image_tag("accesorios-04.png", size: "215x198", alt: "Edit Entry" ,class: "card-img-top")%>
+                <div class="card-body">
+                  <h4 class="card-title">Card title</h4>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                    card's content.</p>
+                  <%= link_to 'Add to cart  <i class="fas fa-cart-plus"></i>'.html_safe, cart_path, class: "btn btn-primary" %>
+                </div>
+              </div>
+            </div>
+          </div>
+  
+        </div>
+        <!--/.First slide-->
+  
+        <!--Second slide-->
+        <div class="carousel-item">
+  
+          <div class="row">
+            <div class="col-md-3">
+              <div class="card mb-2">
+                <%= image_tag("accesorios-05.png", size: "215x198", alt: "Edit Entry" ,class: "card-img-top")%>
+                <div class="card-body">
+                  <h4 class="card-title">Card title</h4>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                    card's content.</p>
+                  <%= link_to 'Add to cart  <i class="fas fa-cart-plus"></i>'.html_safe, cart_path, class: "btn btn-primary" %>
+                </div>
+              </div>
+            </div>
+  
+            <div class="col-md-3">
+              <div class="card mb-2">
+                <%= image_tag("accesorios-06.png", size: "215x198", alt: "Edit Entry" ,class: "card-img-top")%>
+                <div class="card-body">
+                  <h4 class="card-title">Card title</h4>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                    card's content.</p>
+                  <%= link_to 'Add to cart  <i class="fas fa-cart-plus"></i>'.html_safe, cart_path, class: "btn btn-primary" %>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-3 clearfix d-none d-md-block">
+              <div class="card mb-2">
+                <%= image_tag("accesorios-07.png", size: "215x198", alt: "Edit Entry" ,class: "card-img-top")%>
+                <div class="card-body">
+                  <h4 class="card-title">Card title</h4>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                    card's content.</p>
+                  <%= link_to 'Add to cart  <i class="fas fa-cart-plus"></i>'.html_safe, cart_path, class: "btn btn-primary" %>
+                </div>
+              </div>
+            </div>
+  
+            <div class="col-md-3 clearfix d-none d-md-block">
+              <div class="card mb-2">
+                <%= image_tag("accesorios-08.png", size: "215x198", alt: "Edit Entry" ,class: "card-img-top")%>
+                <div class="card-body">
+                  <h4 class="card-title">Card title</h4>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                    card's content.</p>
+                  <%= link_to 'Add to cart  <i class="fas fa-cart-plus"></i>'.html_safe, cart_path, class: "btn btn-primary" %>
+                </div>
+              </div>
+            </div>
+          </div>
+  
+        </div>
+        <!--/.Second slide-->
+  
+        <!--Third slide-->
+        <div class="carousel-item">
+  
+          <div class="row">
+            <div class="col-md-3">
+              <div class="card mb-2">
+                <%= image_tag("accesorios-09.png", size: "215x198", alt: "Edit Entry" ,class: "card-img-top")%>
+                <div class="card-body">
+                  <h4 class="card-title">Card title</h4>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                    card's content.</p>
+                  <%= link_to 'Add to cart  <i class="fas fa-cart-plus"></i>'.html_safe, cart_path, class: "btn btn-primary" %>
+                </div>
+              </div>
+            </div>
+  
+            <div class="col-md-3 clearfix d-none d-md-block">
+              <div class="card mb-2">
+                <%= image_tag("alimento-01.png", size: "215x198", alt: "Edit Entry" ,class: "card-img-top")%>
+                <div class="card-body">
+                  <h4 class="card-title">Card title</h4>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                    card's content.</p>
+                  <%= link_to 'Add to cart  <i class="fas fa-cart-plus"></i>'.html_safe, cart_path, class: "btn btn-primary" %>
+                </div>
+              </div>
+            </div>
+  
+            <div class="col-md-3 clearfix d-none d-md-block">
+              <div class="card mb-2">
+                <%= image_tag("alimento-02.png", size: "215x198", alt: "Edit Entry" ,class: "card-img-top")%>
+                <div class="card-body">
+                  <h4 class="card-title">Card title</h4>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                    card's content.</p>
+                  <%= link_to 'Add to cart <i class="fas fa-cart-plus"></i>'.html_safe, cart_path, class: "btn btn-primary" %>
+                </div>
+              </div>
+            </div>
+
+
+
+            <div class="col-md-3 clearfix d-none d-md-block">
+              <div class="card mb-2">
+                <%= image_tag("alimento-03.png", size: "215x198", alt: "Edit Entry" ,class: "card-img-top")%>
+                <div class="card-body">
+                  <h4 class="card-title">Card title</h4>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                    card's content.</p>
+                  <%= link_to 'Add to cart  <i class="fas fa-cart-plus"></i>'.html_safe, cart_path, class: "btn btn-primary" %>
+                </div>
+              </div>
+            </div>
+          </div>
+  
+        </div>
+        <!--/.Third slide-->
+  
+      </div>
+      <!--/.Slides-->
+            <!--Controls-->
+            <div class="controls-top mt-2 ">
+              <a class="btn-floating" href="#multi-item-example" data-slide="prev"><i class="fa fa-chevron-left"></i></a>
+              <a class="btn-floating" href="#multi-item-example" data-slide="next"><i class="fa fa-chevron-right"></i></a>
+            </div>
+            <!--/.Controls-->
+        
+    </div>
+    <!--/.Carousel Wrapper-->
+  
+  
+  </div>
+</div>

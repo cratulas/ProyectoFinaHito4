@@ -1,26 +1,65 @@
-<h2>Log in</h2>
+<div class="container-fluid login p-5">
+  <div class="container text-center my-5 rounded  logindos">
+    <div class="user">
+        <h1>Log in to your account</h1>
+        <hr>
+            <br />
+        <h4>I AM A PETLOVER</h4>
+        <%= image_tag("corazon con huella.png", size: "100x90", alt: "Edit Entry" ,class: "my-3")%>
+        <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+          <div class="field">
+            <%= f.label :email %><br />
+            <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+          </div>
 
-<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
-  </div>
+          <div class="field">
+            <%= f.label :password %><br />
+            <%= f.password_field :password, autocomplete: "current-password" %>
+          </div>
 
-  <div class="field">
-    <%= f.label :password %><br />
-    <%= f.password_field :password, autocomplete: "current-password" %>
-  </div>
+          <% if devise_mapping.rememberable? %>
+            <div class="field">
+              <%= f.check_box :remember_me %>
+              <%= f.label :remember_me %>
+            </div>
+          <% end %>
 
-  <% if devise_mapping.rememberable? %>
-    <div class="field">
-      <%= f.check_box :remember_me %>
-      <%= f.label :remember_me %>
+          <div class="actions my-2">
+            <%= f.submit "Log in" %>
+          </div>
+        <% end %>
     </div>
-  <% end %>
+    <div class="mt-5"> <%= render "users/shared/links" , class: 'text-dark'%></div>
+                <br />
+                <hr>
+    <div class="vet">
 
-  <div class="actions">
-    <%= f.submit "Log in" %>
+        <h4>I AM A PROFESIONAL</h4>
+        <%= image_tag("corazon con parche.png", size: "100x90", alt: "Edit Entry" ,class: "my-3")%>
+        <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+          <div class="field">
+            <%= f.label :email %><br />
+            <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+          </div>
+
+          <div class="field">
+            <%= f.label :password %><br />
+            <%= f.password_field :password, autocomplete: "current-password" %>
+          </div>
+
+          <% if devise_mapping.rememberable? %>
+            <div class="field">
+              <%= f.check_box :remember_me %>
+              <%= f.label :remember_me %>
+            </div>
+          <% end %>
+
+          <div class="actions my-2">
+            <%= f.submit "Log in" %>
+          </div>
+        <% end %>
+    </div>
+    <div class="mt-5"> <%= render "users/shared/links" , class: 'text-dark'%></div>
+    
   </div>
-<% end %>
-
-<%= render "users/shared/links" %>
+</div>

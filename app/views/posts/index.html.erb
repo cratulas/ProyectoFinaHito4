@@ -1,34 +1,63 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Posts</h1>
+<div class="container-fluid">
 
-<table>
-  <thead>
-    <tr>
-      <th>ID</th>
-      <th>Content</th>
-      <th>Username</th>
-      <th colspan="4"></th>
-    </tr>
-  </thead>
+      <h1 class="text-center my-3">THE WALL</h1>
+      <% @posts.each do |post| %>
+      <div class="row">
+        <div class="col-sm my-2 mx-0 mx-0">
 
-  <tbody>
-    <% @posts.each do |post| %>
-      <tr>
-        <td><%= post.id %></td>
-        <td><%= post.content %></td>
-        <td><%= post.user.username %></td>
-        <td><%= link_to 'Show', post %></td>
-        <td><%= link_to 'Edit', edit_post_path(post) %></td>
-        <td><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-        <td><%= link_to 'Add Comment', new_comment_path(id_post: post.id) %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+        </div>
 
-<br>
+        <div class="col-sm card my-2">
 
-<td><%= link_to 'New Post', new_post_path%></td>
+          
+          <div class="container p-4">
+            <div class="row">
+              <div class="col-sm">
+                <% if post.user.photo.attached? %>
+                <div class="tweet-img">
+                  <%= image_tag post.user.photo.variant(resize:  "100x100", colorspace: "gray"), class: 'rounded img-responsive mb-4', alt: "Not conexion"%>
+                  <li class="no-bullets"><%= link_to 'Add Comment', new_comment_path(id_post: post.id), class: "btn btn-success mt-3" %></li>
+                  <% if current_user.id == post.user_id %>
+                  <li class="no-bullets"><%= link_to 'Edit', edit_post_path(post) , class: "btn btn-warning mt-3" %></li>
+                  <li class="no-bullets"><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } , class: "btn btn-danger mt-3" %></li>
+                  <% end %> 
+                </div>
+                <% else %>
+                <div class="tweet-img">
+                  <%= image_tag("COMUNIDAD.png", size: "100x100", alt: "Edit Entry" ,class: "my-3")%>
+                  <li class="no-bullets"><%= link_to 'Add Comment', new_comment_path(id_post: post.id), class: "btn btn-success mt-3" %></li>
+                  <% if current_user.id == post.user_id %>
+                  <li class="no-bullets"><%= link_to 'Edit', edit_post_path(post) , class: "btn btn-warning mt-3" %></li>
+                  <li class="no-bullets"><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } , class: "btn btn-danger mt-3" %></li>
+                  <% end %> 
+                </div>
 
-<div></div>
+                
+                <% end %>
+              </div>
+              <div class="col-sm">
+                <%= post.content %>
+                <% if post.comments.exists?%>
+                  <li class="no-bullets"><%= link_to 'View Comments', post, class: "btn btn-info mt-3" %></li>
+                <% end %> 
+              </div>
+              
+            </div>
+          </div>
+        </div>       
+
+
+        <div class="col-sm my-2 text-right mx-0 p-0">
+
+        </div>
+        
+      </div>
+      <% end %>
+      <p class="text-center"><%= link_to 'New Post', new_post_path, class: " my-4 btn btn-primary"%></p>
+      
+</div>
+
+
+

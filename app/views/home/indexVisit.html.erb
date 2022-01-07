@@ -1,32 +1,25 @@
-<div class="container">
-
-    <h1>Home#indexVisit</h1>
-    <p>Find me in app/views/home/indexVisit.html.erb</p>
+<div class="container-fluid homeVisit">
     
-    <div class="btn-group" role="group" aria-label="Basic example">
-  <button type="button" class="btn btn-secondary">Left</button>
-  <button type="button" class="btn btn-secondary">Middle</button>
-  <button type="button" class="btn btn-secondary">Right</button>
+    <div class="container">
+        <p class="pt-5 text-info"> Be part of our new community</p>
+        <p class="pl-5 text-info" >PET LOVERS!</p>
+            <li class="nav-item no-bullets p-2"> <%= link_to 'Sign Up Here', new_user_registration_path , class: "text-light btn btn-warning btn-lg", type: "button" %></li>
+            <li class="nav-item no-bullets p-2"><%= link_to 'Are you already a member? Enter here', new_user_session_path , class: "text-light btn btn-warning btn-lg", type: "button" %></li>
+            <li class="nav-item no-bullets p-2"><%= link_to 'Enter with Facebook', user_facebook_omniauth_authorize_path, method: :post , class: "text-light btn btn-warning btn-lg", type: "button" %></li>
+            <li class="nav-item no-bullets p-2"><%= link_to 'You are a profesional? Enter here', new_veterinary_session_path , class: "text-light btn btn-warning btn-lg", type: "button" %></li>
+    </div>
 </div>
 
+
+<div class="container-fluid homeVisit1 my-5">
+    
 </div>
 
-<% unless current_user %>
-<%= link_to 'Sign in with Facebook', user_facebook_omniauth_authorize_path, method: :post %>
-<% else %>
-<%= link_to 'Logout', destroy_user_session_path, method: :delete %>
-<% end %>
-
-<div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
-  <div class="carousel-inner">
-    <div class="carousel-item active">
-        <img src="https://images-na.ssl-images-amazon.com/images/I/71+mDoHG4mL.png" class="d-block w-100" alt="...">
-    </div>
-    <div class="carousel-item">
-      <img src="https://images-na.ssl-images-amazon.com/images/I/71+mDoHG4mL.png" class="d-block w-100" alt="...">
-    </div>
-    <div class="carousel-item">
-      <img src="https://images-na.ssl-images-amazon.com/images/I/71+mDoHG4mL.png" class="d-block w-100" alt="...">
-    </div>
-  </div>
-</div>  
+<div class="container text-info">
+    <hr>
+    <div class="my-4 text-center"> <h2>QUIENES SOMOS?</h2><%= image_tag("COMUNIDAD.png", size: "215x198", alt: "Edit Entry" ,class: "my-3")%> <p class= "mt-4">Somos una comunidad online amante de los animales, queremos y cuidamos a nuestras y a tus mascotas. Queremos compartir nuestros conocimientos y guiar a quienes necesiten ayuda o un consejo.</p> </div><br><hr>
+    <div class="my-4 text-center"> <h2>QUE HACEMOS?</h2><%= image_tag("CHAT.png", size: "215x198", alt: "Edit Entry" ,class: "my-3")%><p class= "mt-4">En esta app puedes participar de nuestra comunidad a traves de un chat en vivo con profesionales y pet lovers dispuestos a responder todas las dudas que tengas con respecto a tus mascotas. </p> </div><br><hr>
+    <div class="my-4 text-center"> <h2>QUE HACEMOS?</h2><%= image_tag("MEDICINA.png", size: "215x198", alt: "Edit Entry" ,class: "my-3")%><p class= "mt-4">En nuestra app puedes agendar citas con centros veterinarios que esten más cerca de ti. Podrás ver su disponibilidad por comuna o región según tus necesidades.</p></div><br><hr>
+    <div class="my-4 text-center"> <h2>QUE HACEMOS?</h2><%= image_tag("MERCADO.png", size: "215x198", alt: "Edit Entry" ,class: "my-3")%><p class= "mt-4">Tenemos un mercado donde puedes comprar o vender lo que necesites para tus mascotas, desde alimentación hasta entretención, para regalonear a tus amores.</p> </div><br><hr class="bg-warning">
+    <br>
+</div>
